@@ -20,6 +20,8 @@ public class Post {
         this.postDate = postDate;
     }
 
+
+
     public UUID getId() {
         return id;
     }

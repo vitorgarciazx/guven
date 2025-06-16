@@ -1,5 +1,6 @@
 package src.models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.UUID;
 
@@ -11,6 +12,10 @@ public class Tutorial {
     private String content;
     private String image; //Colocar o url da imagem como string e puxar no front ou outra opção
     //Criar entidade associativa para Admin
+
+    private ArrayList<String> commentQuestion = new ArrayList<>();
+    private ArrayList<String> commentAnswer = new ArrayList<>();
+    //Duas listas, uma para as perguntas e outra para as respostas em comentario.
 
     public Tutorial( UUID id,
      UUID adminId,
@@ -25,6 +30,8 @@ public class Tutorial {
         this.content = content;
         this.image = image;
     }
+
+
 
     public UUID getId() {
         return id;
@@ -48,5 +55,13 @@ public class Tutorial {
 
     public String getImage() {
         return image;
+    }
+
+    public ArrayList<String> getCommentQuestion() {
+        return commentQuestion;
+    }
+
+    public ArrayList<String> getCommentAnswer() {
+        return commentAnswer;
     }
 }

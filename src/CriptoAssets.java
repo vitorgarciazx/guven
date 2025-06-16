@@ -1,6 +1,7 @@
 package src;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.UUID;
 
 public class CriptoAssets {
@@ -8,6 +9,8 @@ public class CriptoAssets {
     private String name;
     private String acronym;
     private BigDecimal presentValue;
+
+    private HashMap<String, BigDecimal> currencyQuote = new HashMap<String, BigDecimal>();
 
     public void atualizarValor(){
         //Método para atualizar o valor da cripto
